@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://127.0.0.1/scripts/js/jquery-3.6.0.js"></script>
+	<script data-require="angular.js@1.8.2" data-semver="1.8.2" src="http://127.0.0.1/scripts/js/angular-1.8.2/angular.min.js"></script>
+	<script src="http://127.0.0.1/scripts/js/angular-1.8.2/ui-bootstrap-tpls-0.3.0.min.js"></script> 
+	<link rel="stylesheet" href="http://127.0.0.1/scripts/css/bootstrap.min.css" />
+	<script src="app.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="ListController as list" ng-init="loadData(1)">
+	<h1 style="color: green;" ;>
+		GeeksforGeeks
+	</h1>
+	<h3>AngularJS Paging1</h3>
+	<table class="table" id="angularTabData"><tbody>
+                        <tr><td>TX_DATE</td><td>ACTIVITY</td><td>SOURCEDESTINATION</td>
+                        <td>WALLETTXID</td><td>USR_COMMENT</td><td>DEBIT</td>
+                        <td>CREDIT</td><td>TRANSACTION_BREAKUP</td><td>STATUS</td></tr>
+			<tr ng-repeat="item in filteredItems">
+            <td>{{item.txDate}}</td>
+            <td>{{item.activity}}</td>
+            <td>{{item.sourceDestination}}</td>
+            <td>{{item.walletTxId}}</td>
+            <td>{{item.usr_comment}}</td>
+            <td>{{item.debit}}</td>
+            <td>{{item.credit}}</td>
+            <td>{{item.transaction_breakup}}</td>
+			<td>{{item.status}}</td>
+        </tr>
+		</tbody>
+	</table>
+   <nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item"><input class="btn btn-primary" type="button" value="Previous" ng-click="loadData(curPage - 1)" ng-init="curPage=1" ng-disabled="curPage==1"/></li>
+        <li class="page-item"><input class="btn btn-primary" type="button" value="Next" ng-click="loadData(curPage + 1)" ng-init="curPage=1" ng-disabled="curPage==numOfPages"/></li>
+    </ul>
+</nav>
+</body>
+</html>

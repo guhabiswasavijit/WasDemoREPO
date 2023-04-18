@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PaytmServices" basedir=".">
+	<property name="src" value="PaytmServices/src/main/java"/>
+	<property name="bin" value="PaytmServices/bin" />
+	<property name="lib" value="H:/JavaWorkspace/java-ant-build-ear/lib/" />
+    <property name="dist" value="PaytmServices/dist" />
+    <property name="jar.file" value="${dist}/PaytmServices.jar" />
+    <path id="classpath.base">
+        <fileset dir="${lib}">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+    <target name="clean">
+        <delete dir="${bin}"></delete>
+    </target>
+    <target name="prepare">
+        <mkdir dir="${bin}" />
+    </target>
+    <target name="compile" depends="clean, prepare">
+        <javac srcdir="${src}" destdir="${bin}" verbose="false" includeantruntime="false">
+            <classpath refid="classpath.base" />
+        </javac>
+    </target>
+    <target name="create-jar" depends="compile">
+        <jar jarfile="${jar.file}">
+            <fileset dir="${bin}">
+            </fileset>
+        	<fileset dir="${lib}">
+        		<include name="lombok-1.18.22.jar"/>
+        	</fileset>
+        </jar>
+        <copy file="${jar.file}" todir="${lib}"/>
+    </target>
+</project>

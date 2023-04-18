@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PaytmEAR" basedir=".">
+
+    <property name="dist" value="ear/dist" />
+    <property name="application.ear" value="${dist}/Paytm.ear" />
+    <property name="application.xml" value="ear/META-INF/application.xml" />
+
+    <target name="create-ear">
+	  	<ear destfile="${application.ear}" appxml="${application.xml}">
+	      <fileset dir="PaytmServices/dist" includes="PaytmServices.jar"/>
+          <fileset dir="PaytmWebContainer/dist" includes="PaytmWeb.war"/>
+	    </ear>
+    </target>
+</project>

@@ -1,0 +1,7 @@
+<project  name="Paytm" basedir="." default="run">
+    <target name="run">
+        <ant antfile="PaytmServices/build.xml" target="create-jar"/>
+        <ant antfile="PaytmWebContainer/build.xml" target="create-war"/>
+        <ant antfile="ear/build.xml" target="create-ear"/>
+    </target>
+</project>
