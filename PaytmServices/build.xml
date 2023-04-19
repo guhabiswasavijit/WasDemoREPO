@@ -27,6 +27,7 @@
             </fileset>
         	<fileset dir="${lib}">
         		<include name="lombok-1.18.22.jar"/>
+        		<include name="hibernate-core-5.6.9.Final.jar"/>
         	</fileset>
         </jar>
         <copy file="${jar.file}" todir="${lib}"/>

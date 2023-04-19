@@ -6,8 +6,10 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="libs/javaee-api-8.0.1.jar"/>
-	<classpathentry kind="lib" path="libs/lombok-1.18.22.jar"/>
-	<classpathentry kind="lib" path="libs/hibernate-core-5.6.9.Final.jar"/>
+	<classpathentry kind="lib" path="H:/JavaWorkspace/java-ant-build-ear/lib/hibernate-core-5.6.9.Final.jar"/>
+	<classpathentry kind="lib" path="H:/JavaWorkspace/java-ant-build-ear/lib/javaee-api-8.0.1.jar"/>
+	<classpathentry kind="lib" path="H:/JavaWorkspace/java-ant-build-ear/lib/javax.servlet-api-3.1.0.jar"/>
+	<classpathentry kind="lib" path="H:/JavaWorkspace/java-ant-build-ear/lib/json-20180130.jar"/>
+	<classpathentry kind="lib" path="H:/JavaWorkspace/java-ant-build-ear/lib/lombok-1.18.22.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
